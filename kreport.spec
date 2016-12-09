@@ -1,6 +1,6 @@
 %define major 3
-%define libname %mklibname KDb3 %{major}
-%define devname %mklibname KDb3 -d
+%define libname %mklibname KReport3 %{major}
+%define devname %mklibname KReport3 -d
 
 Name:		kreport
 Version:	3.0.0
@@ -17,6 +17,7 @@ BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Test)
 BuildRequires:	cmake(Qt5Network)
+BuildRequires:	cmake(Qt5PrintSupport)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KF5CoreAddons)
 BuildRequires:	cmake(KF5GuiAddons)
