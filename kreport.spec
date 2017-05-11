@@ -3,7 +3,7 @@
 %define devname %mklibname KReport3 -d
 
 Name:		kreport
-Version:	3.0.0
+Version:	3.0.1
 Release:	1
 Source0:	http://download.kde.org/stable/%{name}/src/%{name}-%{version}.tar.xz
 Summary:	Framework for the creation and generation of reports
