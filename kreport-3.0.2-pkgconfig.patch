@@ -1,0 +1,11 @@
+diff -up kreport-3.0.2/KReport.pc.cmake.pkgconfig kreport-3.0.2/KReport.pc.cmake
+--- kreport-3.0.2/KReport.pc.cmake.pkgconfig	2017-08-02 17:20:51.352255987 -0500
++++ kreport-3.0.2/KReport.pc.cmake	2017-08-11 19:53:40.214378953 -0500
+@@ -7,6 +7,6 @@ Name: KReport
+ Description: A framework for the creation and generation of reports in multiple formats
+ Version: @PROJECT_VERSION@
+ URL: https://community.kde.org/KReport
+-Requires: Qt5Core Qt5Gui Qt5Widgets Qt5Xml Qt5PrintSupport KF5CoreAddons KF5WidgetsAddons KF5GuiAddons KPropertyCore KPropertyWidgets
++Requires.private: Qt5Core Qt5Gui Qt5Widgets Qt5Xml Qt5PrintSupport
+ Libs: -L${libdir}
+ Cflags: -I${includedir}

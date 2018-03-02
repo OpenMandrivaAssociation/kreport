@@ -6,6 +6,7 @@ Name:		kreport
 Version:	3.0.2
 Release:	1
 Source0:	http://download.kde.org/stable/%{name}/src/%{name}-%{version}.tar.xz
+Patch1:		kreport-3.0.2-pkgconfig.patch
 Summary:	Framework for the creation and generation of reports
 URL:		http://community.kde.org/KReport
 License:	LGPLv2+
@@ -65,6 +66,7 @@ It is used by Kexi and Calligra Plan.
 
 %prep
 %setup -q
+%apply_patches
 # Build script requires python 2.x
 ln -s %{_bindir}/python2 python
 export PATH=`pwd`:$PATH
