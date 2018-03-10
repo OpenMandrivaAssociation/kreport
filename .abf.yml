@@ -1,4 +1,5 @@
 removed_sources:
   kreport-3.0.1.tar.xz: 08f2cda7cd14bafcfb8afc85d851192a3dba7ca5
-sources:
   kreport-3.0.2.tar.xz: 86605f456da9fb7b541756a6a4ad47cdcc8a0098
+sources:
+  kreport-3.1.0.tar.xz: d029cd1c6719952696121cd4e5095db4d09c794d

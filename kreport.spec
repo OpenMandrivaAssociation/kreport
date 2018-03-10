@@ -1,10 +1,11 @@
-%define major 3
+%define major 4
 %define libname %mklibname KReport3 %{major}
 %define devname %mklibname KReport3 -d
+%define olibname %mklibname KReport3 3
 
 Name:		kreport
-Version:	3.0.2
-Release:	2
+Version:	3.1.0
+Release:	1
 Source0:	http://download.kde.org/stable/%{name}/src/%{name}-%{version}.tar.xz
 Patch1:		kreport-3.0.2-pkgconfig.patch
 Summary:	Framework for the creation and generation of reports
@@ -44,6 +45,7 @@ It is used by Kexi and Calligra Plan.
 Summary: Framework for the creation and generation of reports
 Group: System/Libraries
 Requires: %{name} = %{EVRD}
+Obsoletes: %{olibname}
 
 %description -n %{libname}
 KReport is a framework for the creation and generation of reports in
@@ -79,7 +81,9 @@ export PATH=`pwd`:$PATH
 %install
 %ninja_install -C build
 
-%files
+%find_lang %{name} --with-qt --all-name
+
+%files -f %{name}.lang
 %{_libdir}/qt5/plugins/kreport3
 %{_datadir}/kreport3
 %{_datadir}/kservicetypes5/kreport_elementplugin.desktop
