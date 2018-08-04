@@ -85,7 +85,7 @@ export PATH=`pwd`:$PATH
 %find_lang kreport_barcodeplugin --with-qt
 %find_lang kreport_mapsplugin --with-qt
 %find_lang kreport_webplugin --with-qt
-cat *.lang >> %{name}.lang
+cat kreport_barcodeplugin.lang kreport_mapsplugin.lang kreport_webplugin.lang >> %{name}.lang
 
 %files -f %{name}.lang
 %{_libdir}/qt5/plugins/kreport3
