@@ -83,7 +83,7 @@ export PATH=`pwd`:$PATH
 
 %find_lang %{name} --with-qt
 %find_lang kreport_barcodeplugin --with-qt
-%find_lang kreport_mapsplugin_qt --with-qt
+%find_lang kreport_mapsplugin --with-qt
 %find_lang kreport_webplugin --with-qt
 cat *.lang > %{name}.lang
 
