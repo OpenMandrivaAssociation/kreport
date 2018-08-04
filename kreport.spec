@@ -81,7 +81,11 @@ export PATH=`pwd`:$PATH
 %install
 %ninja_install -C build
 
-%find_lang %{name} --with-qt --all-name
+%find_lang %{name} --with-qt
+%find_lang kreport_barcodeplugin --with-qt
+%find_lang kreport_mapsplugin_qt --with-qt
+%find_lang kreport_webplugin --with-qt
+cat *.lang > %{name}.lang
 
 %files -f %{name}.lang
 %{_libdir}/qt5/plugins/kreport3
