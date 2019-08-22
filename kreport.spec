@@ -4,8 +4,8 @@
 %define olibname %mklibname KReport3 3
 
 Name:		kreport
-Version:	3.1.0
-Release:	3
+Version:	3.2.0
+Release:	1
 Source0:	http://download.kde.org/stable/%{name}/src/%{name}-%{version}.tar.xz
 Patch1:		kreport-3.0.2-pkgconfig.patch
 Summary:	Framework for the creation and generation of reports
@@ -32,6 +32,7 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	cmake(KPropertyCore)
 BuildRequires:	cmake(KPropertyWidgets)
 BuildRequires:	python2
+BuildRequires:	doxygen graphviz qt5-assistant
 Requires:	%{libname} = %{EVRD}
 
 %description
@@ -70,8 +71,8 @@ It is used by Kexi and Calligra Plan.
 %setup -q
 %apply_patches
 # Build script requires python 2.x
-ln -s %{_bindir}/python2 python
-export PATH=`pwd`:$PATH
+#ln -s %{_bindir}/python2 python
+export PATH=`pwd`:%{_libdir}/qt5/bin:$PATH
 
 %cmake_kde5
 
@@ -101,3 +102,4 @@ cat kreport_barcodeplugin.lang kreport_mapsplugin.lang kreport_webplugin.lang >>
 %{_libdir}/pkgconfig/*
 %{_libdir}/cmake/KReport3
 %{_libdir}/qt5/mkspecs/modules/qt_KReport3.pri
+%doc %{_docdir}/qt5/*
