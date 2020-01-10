@@ -69,7 +69,7 @@ It is used by Kexi and Calligra Plan.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 # Build script requires python 2.x
 #ln -s %{_bindir}/python2 python
 export PATH=`pwd`:%{_libdir}/qt5/bin:$PATH
