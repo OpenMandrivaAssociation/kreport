@@ -5,7 +5,7 @@
 
 Name:		kreport
 Version:	3.2.0
-Release:	2
+Release:	3
 Source0:	http://download.kde.org/stable/%{name}/src/%{name}-%{version}.tar.xz
 Patch1:		kreport-3.0.2-pkgconfig.patch
 Summary:	Framework for the creation and generation of reports
@@ -82,11 +82,7 @@ export PATH=`pwd`:%{_libdir}/qt5/bin:$PATH
 %install
 %ninja_install -C build
 
-%find_lang %{name} --with-qt
-%find_lang kreport_barcodeplugin --with-qt
-%find_lang kreport_mapsplugin --with-qt
-%find_lang kreport_webplugin --with-qt
-cat kreport_barcodeplugin.lang kreport_mapsplugin.lang kreport_webplugin.lang >> %{name}.lang
+%find_lang %{name} --with-qt --all-name
 
 %files -f %{name}.lang
 %{_libdir}/qt5/plugins/kreport3
