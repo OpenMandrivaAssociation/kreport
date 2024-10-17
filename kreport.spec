@@ -9,7 +9,7 @@ Release:	6
 Source0:	http://download.kde.org/stable/%{name}/src/%{name}-%{version}.tar.xz
 Patch1:		kreport-3.0.2-pkgconfig.patch
 Summary:	Framework for the creation and generation of reports
-URL:		http://community.kde.org/KReport
+URL:		https://community.kde.org/KReport
 License:	LGPLv2+
 Group:		System/Libraries
 BuildRequires:	cmake(ECM)
